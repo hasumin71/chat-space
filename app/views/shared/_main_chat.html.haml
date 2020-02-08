@@ -7,7 +7,6 @@
         %li.main-header__left-box__member-list__member-name  伊藤
     .main-header__edit-btn
       = link_to "Edit", "#",  class: "btn__edit-btn"
-  
   .messages
     .message
       .message__upper-info
@@ -38,7 +37,7 @@
   .form
     .new-message
       .input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text", :value => ""}/
+        %input.input-box__text{placeholder: "type a message", type: "text", value:""}
         %label{class: "input-box__image"}
           = icon('fas', 'image')
           %input{type: "file", class:"input-box__image__file"}
