@@ -1,0 +1,18 @@
+.chat-side
+  .side-header  
+    .side-header__box
+      %p.side-header__box__username
+        伊藤
+      %ul.side-header__box__menu
+        %li.side-header__box__edit-user
+        = link_to "#" do
+          = icon('fas','edit')
+        %li.side-header__box__new-group
+        = link_to "#" do
+          = icon('fas', 'cog')
+  .groups       
+    .group  
+      %p.group__group-name
+        家事洗濯
+      %p.group__latest-message
+        いつもありがとうございます
