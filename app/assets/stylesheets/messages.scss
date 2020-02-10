@@ -5,6 +5,9 @@
 .wrapper {
   height: 100vh;
   display: flex;
+a {
+  text-decoration: none;
+}  
   .chat-side {
     background-color: #253141;
     height: 100vh;
