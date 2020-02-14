@@ -13,40 +13,14 @@
       -#   %li.main-header__left-box__member-list__member-name  伊藤
   .messages
     = render @messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker  伊藤
-        %p.message__upper-info__date  2020/02/07(Fri) 18:12:39
-      %p.message__text  鬼ごろし
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker  伊藤
-        %p.message__upper-info__date  2020/02/07(Fri) 18:12:39
-      %p.message__text  赤霧島
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker  伊藤
-        %p.message__upper-info__date  2020/02/07(Fri) 18:12:39
-      %p.message__text  百年の孤独
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker  伊藤
-        %p.message__upper-info__date  2020/02/07(Fri) 18:12:39
-      %p.message__text  響  21年 
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker  伊藤
-        %p.message__upper-info__date  2020/02/07(Fri) 18:12:39
-      %p.message__text  死とは何か 
-
- 
+  
   .message-form
     =form_for([@group,@message], html:{class: "new-message"}) do |f|
       .input-wrapper
         = f.text_field :content, class: "input-wrapper__input-message", placeholder: "type a text"
         %label.input-wrapper__img-btn 
           = icon('fas','image')
-          =f.file_field :file, class: "input-wrapper__img-btn__file"
+          =f.file_field :image, class: "input-wrapper__img-btn__file"
       = f.submit :submit, class: "new-message__send-btn"    
  
   -# .form
