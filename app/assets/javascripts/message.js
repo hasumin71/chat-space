@@ -65,6 +65,10 @@ $('#new_message').on('submit', function(e){
 
   .fail(function() {
     alert("メッセージ送信に失敗しました");
+  })
+  .always(function() {
+    $(".new-message__send-btn").
+  prop("disabled", false);  
   });
 })
 });
