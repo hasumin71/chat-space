@@ -39,17 +39,15 @@ $('#new_message').on('submit', function(e){
   .done(function(data){
     var html = buildHTML(data);
     $('.messages').append(html);      
-    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}); 
+    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     $('form')[0].reset();
-    $(".new-message__send-btn").prop("disabled", false);
   })
 
   .fail(function() {
     alert("メッセージ送信に失敗しました");
   })
   .always(function() {
-    $(".new-message__send-btn").
-  prop("disabled", false);  
+    $(".new-message__send-btn").prop("disabled", false);  
   });
 })
 
@@ -64,7 +62,7 @@ $('#new_message').on('submit', function(e){
         data: {id: last_message_id}
       })
       .done(function(messages){ 
-        if (messages.length !== 0) {
+        if (messages.length !==0) {
           var insertHTML = ''; 
           $.each(messages, function(i, message) {
             insertHTML += buildHTML(message)
